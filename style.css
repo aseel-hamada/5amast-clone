@@ -1,0 +1,527 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container-parent{
+    width: 100%;
+}
+/* navbar */
+.navbar {
+    background-color: #444;
+    padding: 0px 70px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+}
+.navbar div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.navbar .nav-child-left img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.navbar a{
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 400;
+    height: 100%;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* بيعطني حجم لديف او للينك حسب المحتوى الموجود بداخله بدون م احدد بالبسكل */
+    width: fit-content;
+    color: white;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+.navbar a:hover{
+    background-color: rgb(135, 135, 135);
+}
+.navbar a i{
+    font-size: 16px;
+    color: white;
+}
+.navbar .nav-child-right img{
+    width: 140px;
+    height: 80%;
+    padding: 5px;
+}
+.navbar .nav-child-right a i{
+    margin: 0px 5px;
+    font-size: 13px;
+    font-weight: 900;
+}
+.navbar .nav-child-right .fa-bars{
+    font-size: 20px;
+}
+/* end navbar */
+/* main */
+main{
+    min-height: 100vh;
+    background-image: url(imgs/main.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+}
+main h3,
+.services h3{
+    font-size: 35px;
+    font-family: 'Noto Kufi Arabic', sans-serif;
+    text-align: center;
+}
+main p{
+    font-size: 16px;
+    margin: 20px 0px;
+    color: #444;
+}
+main .parent-search{
+    position: relative;
+}
+main input{
+    width: 650px;
+    height: 65px;
+    padding: 5px 15px;
+    border: none !important;
+    outline: none !important;
+    font-size: 20px;
+}
+main input::placeholder{
+    font-size: 20px;
+}
+main button{
+    width: 80px;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left:5px;
+    /* لو بدي الغيها بخلي التوب 10 بالمية  */
+    transform: translateY(-50%);
+    border: none !important;
+    background-color: #52b035;
+    font-size: 18px;
+    color: white;
+}
+/* end main */
+/* start services */
+.services{
+    min-height: 100vh;
+    padding: 50px;
+    width: 100%;
+}
+.services h3{
+    font-size: 28px;
+}
+.services .parent-services{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.services .parent-services .service{
+    width: 23%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('imgs/service-1.jpg');
+    background-size: 100% 100%;
+    position: relative;
+    margin: 20px auto;
+}
+/* عملناها عشان نغمق لون الصورة شبه الهوفر  */
+.services .parent-services .service::after{
+    /* after and before take contentحبيتي ولا لا هتحطي ال */
+    content: "";
+    /* وممكن اضيف على الكلام الي موجود بالديفات من خلال الكونتنت  */
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    /* عشان اخليه ياخد حجم الديف كله لانو الاب ريلتف */
+    position: absolute;
+    opacity: .4;
+    left: 0;
+}
+.services .parent-services .service-two{
+    background-image: url('imgs/service-2.jpg');
+}
+.services .parent-services .service-three{
+    background-image: url('imgs/service-3.jpg');
+}
+.services .parent-services .service-four{
+    background-image: url('imgs/service-4.jpg');
+}
+.services .parent-services .service-five{
+    background-image: url('imgs/service-5.jpg');
+}
+.services .parent-services .service-six{
+    background-image: url('imgs/service-6.jpg');
+}
+.services .parent-services .service-seven{
+    background-image: url('imgs/service-7.jpg');
+}
+.services .parent-services .service-eight{
+    background-image: url('imgs/service-8.jpg');
+}
+.services .parent-services .service-nine{
+    background-image: url('imgs/service-9.jpg');
+}
+.services .parent-services .service-ten{
+    background-image: url('imgs/service-10.jpg');
+}
+.services .parent-services .service-elevn{
+    background-image: url('imgs/service-11.jpg');
+}
+.services .parent-services .service-twelv{
+    background-image: url('imgs/service-12.jpg');
+}
+.services .parent-services .service p{
+    font-size: 24px;
+    color: white;
+    position: relative;
+    /* عشان اخلى الكلمة تطلع فوق الصورة وفوق الخلفية الرمادي */
+    z-index: 2;
+    font-family:  "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+/* end servics */
+/* start famouse service */
+.famous-service{
+    width: 100%;
+    /* padding: 35px 0 100px; */
+    background-color: #F1F1F1;
+}
+.famous-service .section-three-services{
+    width: 100%;
+    padding: 70px 0 !important;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+.famous-service .section-three-services .title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.famous-service .section-three-services .title p{
+    font-size: 28px;
+    margin-bottom: 50px;
+    line-height: 44px;
+    color: #222222;
+    font-weight: 500;
+}
+/* .items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1px;
+    /* column-gap: 25px;  */
+/* } */
+
+/* .items .item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    /* padding: 20px; */
+    /* height: 100%; */
+/* }   */
+.items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.items .item{
+    padding: 15px;
+    width: 22%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 80px;
+    box-sizing: border-box; 
+ }
+ 
+.items .item img{
+    margin-top: -5px;
+    margin-left: 15px;
+}
+.items .item .item-title{
+    font-size: 16px;
+    color: #222222;
+    font-weight: 500;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+/* end services */
+/* container-safety */
+.container-safety{
+    width: 100%;
+    height: 100vh;
+    padding: 100px !important;
+}
+.container-safety .safty-title {
+    margin-bottom: 70px;
+    text-align: center;
+}
+.container-safety .safty-title h2{
+    font-size: 28px;
+    margin-bottom: 25px;
+    line-height: 44px;
+    color: #222222;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+.features{
+    align-self: center !important;
+    position: relative;
+    padding: 10px 80px;
+}
+.list{
+    margin-right: 1.5rem !important;
+    list-style: none;
+    margin: 2px;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+.list li{
+    font-size: 16px;
+    margin-bottom: 20px;
+    list-style: none;
+    position: relative;
+}
+.list .check-icon{
+    position: absolute;
+    right: -25px;
+    top: 0;
+    font-size: 20px;
+}
+.list li h4{
+    font-size: 20px;
+    margin-bottom: 22px;
+    line-height: 36px;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+.list li p{
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 25px;
+} 
+.features, .video {
+    flex: 1;
+    padding: 10px;
+}
+
+.video {
+    position: relative;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 28px 0 rgba(0,0,0,0.1);
+}
+/* end safety */
+/* start another service */
+.all-service-next{
+    width: 100%;
+    padding: 50px 70px 0px;
+    background-color: #F1F1F1;
+}
+/* .all-service-next .section-four-services{
+    margin: 20px 0px;
+    width: 100%;
+} */
+.all-service-next .section-four-services .title{
+    width: 100%;
+    margin: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px;
+}
+.all-service-next .section-four-services .title a{
+    padding: 0px 10px;
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #52b035;
+    color: #52b035;
+    font-family: "Noto Kufi Arabic","sans-serif";
+    transition: .3s all linear;
+}
+.all-service-next .section-four-services .title a:hover{
+  background-color: #52b035;
+  color: white;
+}
+.all-service-next .section-four-services .title p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Noto Kufi Arabic","sans-serif";
+    margin-right: 20px;
+}
+.divs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divs .div{
+    width: 23%;
+    margin: 20px auto;
+    height: 330px;
+}
+.divs .div img{
+    width: 100%;
+    max-height: 60%;
+    cursor: pointer;
+}
+.divs .div a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 30px;
+}
+.divs .div a:hover{
+    color: #52b035;
+}
+.divs .div p,
+.divs .div span{
+    font-weight: 300 !important;
+    font-size: 12px;
+    color: #777777;
+    font-family: "Noto Kufi Arabic","sans-serif";
+}
+.divs .div i{
+    color: #fa9747;
+    font-size: 14px;
+}
+.divs .div .price{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+}
+.divs .div .price span{
+    color: black;
+    font-size: 18px;
+    font-family: serif;
+    font-weight: 900 !important;
+}
+/* end */
+.links{
+    padding: 50px 70px 20px;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.links .parent{
+    width: 25%;
+}
+.links .parent ul li{
+    list-style-type: none !important;
+    margin: 10px 0px;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: "Noto Kufi Arabic","sans-serif";
+}
+.links .parent ul li i{
+    font-size: 35px;
+    background-color: white;
+    padding: 0px;
+    color: gray;
+}
+.links .parent ul li .fa-square-facebook{
+    color: #3b5998;
+}
+.links .parent ul li .fa-square-twitter{
+    margin-right:10px;
+    color: #55acee;
+}
+.links .parent ul li .fa-cc-visa,
+.links .parent ul li .mastercard,
+.links .parent ul li .paypal{
+    margin-top: 7px;
+}
+.links .parent ul li a{
+    text-decoration: none !important;
+    color: #52b035;
+    font-size: 13px;
+    font-family: "Noto Kufi Arabic","sans-serif";
+}
+/* endd */
+/* footer */
+footer{
+    width: 100%;
+}
+footer .footer-top{
+    width: 100%;
+    background-color:#F1F1F1;
+    padding: 22px 80px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-top span{
+    font-size: 13px;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+}
+footer .footer-top .footer-links a{
+    text-decoration: none;
+    color: #444;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    font-size: 14px;
+    margin: 0px 10px;
+}
+.footer-bottom{
+    width: 100%;
+    padding: 50px 0px 0px;
+}
+.parent-footer-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 20px;
+}
+.parent-footer-logo img{
+    height: 36px;
+}
+.links-bottom{
+    padding: 20px 200px;
+    font-family: "Noto Kufi Arabic", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    display: flex;
+    flex-wrap: wrap;
+}
+.links-bottom .item{
+    padding: 12px 0px;
+    width: 160px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+.links-bottom .item h2{
+    font-size: 13px;
+    line-height: 0;
+    margin-bottom: 5px;
+}
+.links-bottom .item a{
+    text-decoration: none;
+    color: #777777;
+    font-size: 10px;
+    line-height: 0;
+}
